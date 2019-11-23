@@ -1,5 +1,8 @@
 import "./sass/style.scss";
 
-const aha = "aaa";
+const btnBurger = document.querySelector('.menu__burger');
 
-console.log(aha);
+btnBurger.addEventListener('click', () => {
+  document.querySelector('.menu__list').classList.toggle('menu__list--open');
+  btnBurger.classList.toggle('menu__burger--close');
+});

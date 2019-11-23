@@ -13,3 +13,8 @@
   margin: 0 auto;
   padding: 0 $main-spacing;
 };
+
+html {
+  overflow-x: hidden;
+  font-family: $font-family;
+};
