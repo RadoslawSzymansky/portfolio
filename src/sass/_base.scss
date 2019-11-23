@@ -1,0 +1,15 @@
+
+.row { 
+  position: relative;
+  &::after, &::before {
+    display: table;
+    content: "";
+    clear: both;
+  }
+};
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 $main-spacing;
+};

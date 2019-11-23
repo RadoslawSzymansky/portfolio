@@ -1,0 +1,57 @@
+[class*="col-"] {
+    float: left;
+    min-height: 1px;
+};
+
+@for $i from 1 through 12 {
+    $width: percentage(1 / $i);
+
+    .col-#{13 - $i} {
+        width: $width;
+    }
+};
+
+@include mq(xsmall) {
+    @for $i from 1 through 12 {
+        $width: percentage(1 / $i);
+        .col-xs-#{$i} {
+            width: $width;
+        }
+    };
+};
+
+@include mq(small) {
+    @for $i from 1 through 12 {
+        $width: percentage(1 / $i);
+        .col-s-#{13 - $i} {
+            width: $width;
+        }
+    };
+};
+
+@include mq(medium) {
+    @for $i from 1 through 12 {
+        $width: percentage(1 / $i);
+        .col-m-#{13 - $i} {
+            width: $width;
+        }
+    };
+};
+
+@include mq(large) {
+    @for $i from 1 through 12 {
+        $width: percentage(1 / $i);
+        .col-l-#{13 - $i} {
+            width: $width;
+        }
+    };
+};
+
+@include mq(xlarge) {
+    @for $i from 1 through 12 {
+        $width: percentage(1 / $i);
+        .col-xl-#{13 - $i} {
+            width: $width;
+        }
+    };
+};
