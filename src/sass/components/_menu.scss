@@ -11,13 +11,12 @@
     flex-wrap: wrap;
   };
 
-  &__logo {
-    color: $bgc-dark;
+  &__logo span {
+    color: $bgc-light;
     font-size: 2.2rem;
-  };
-
-  &__content {
-    background-color: #fff;
+    &:hover {
+      color: $bgc-dark;
+    }
   };
 
   &__list {
@@ -27,6 +26,7 @@
     height: 0;
     transition: .4s ease-out;
     text-align-last: center;
+    opacity: 0;
   };
 
   &__list--open {
@@ -34,13 +34,10 @@
     width: 100%;
     left: 0;
     height: auto;
+    opacity: 1;
     .menu__link--contact {
-      max-width: 170px;
       margin-top: 10px;
-      border: 2px solid;
-      border-radius: 25px;
-      color: $bgc-light;
-      transition: 0.2s;
+     
 
       &:hover {
         background-color: $bgc-light;
@@ -55,6 +52,20 @@
     width: 100%;
     color: $text-color;
     font-weight: 300;
+
+    &--contact {
+      max-width: 170px;
+      margin-top: 10px;
+      border: 2px solid;
+      border-radius: 25px;
+      color: $bgc-light;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: $bgc-light;
+        color: #fff;
+      }
+    }
   };
 
   &__burger {
@@ -91,8 +102,58 @@
     border-radius: 2px;
     transition: .2s;
   };
-};
 
-.proba {
-  // background-color: rgb(243, 243, 243);
-}
+  @include mq(medium) {
+    &__burger-wrapper {
+      display: none;
+    };
+    
+    &__wrapper {
+      flex-wrap: nowrap;
+    };
+
+    &__list {
+      position: static;
+      display: flex;
+      justify-content: flex-end;
+      height: auto;
+      opacity: 1;
+    };
+
+    &__link {
+      margin: 0 15px;
+      padding: 5px 2px;
+      color:  black;
+
+      &::after {
+        display: block;
+        position: relative;
+        content: "";
+        width: 0%;
+        height: 1px;
+        top: 8px;
+        background-color: red;
+        transition: 0.5s;
+      };
+
+      &:hover:not(.menu__link--contact) {
+        animation: letters .4s linear forwards;
+        color: red;
+        background-position: 100% 0%;
+        background-image: linear-gradient(to left, black 50% , red 50%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+
+        &::after {
+        width: 70%;
+        left: 15%;
+        }
+      }
+      &--contact {
+        color: $bgc-light;
+      }
+    };
+  };
+};

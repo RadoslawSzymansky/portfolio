@@ -4,8 +4,8 @@ $color-danger: rgba(226, 226, 226, 0.445);
 $color-link: rgb(243, 235, 235);
 $color-link-active: rgb(228, 125, 125);
 
-$bgc-light: rgb(134, 47, 247);;
-$bgc-dark: #750FF7;
+$bgc-light: rgb(147, 70, 248);;
+$bgc-dark: rgb(141, 60, 247);
 $bgc-gray: rgba(240, 234, 233, 0.445);
 
 $font-family: 'Roboto', sans-serif;
@@ -32,7 +32,7 @@ $transition-time: 0.3s;
 $breakpoints: (
   xsmall: (min-width: 460px),
   small: (min-width: 640px),
-  medium: (min-wdith: 800px),
-  large: (min-wdith: 1024px),
-  xlarge: (min-wdith: 1200px),
+  medium: (min-width: 800px),
+  large: (min-width: 1024px),
+  xlarge: (min-width: 1200px),
 );
