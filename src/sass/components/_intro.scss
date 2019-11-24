@@ -1,0 +1,27 @@
+.intro {
+  padding: 50px 0 0;
+  background-color: rgb(248, 248, 248);
+  font-family: 'Lato', sans-serif;
+  color: $text-color;
+  text-align: center;
+  &__desc {
+    max-width: 680px;
+    margin: 0 auto;
+    font-weight: 300;
+    color: $text-color-light;
+  }
+  .img--author {
+    display: block;
+    margin-top: 10px;
+    margin: 50px auto 50px;
+    width: 130px;
+    border-radius: 25%;
+    box-shadow: 0 0 4px 2px $bgc-light;
+    // border: 3px solid $bgc-light;
+  }
+  .img--bottom {
+    padding: 0 20%;
+    max-width: 100%;
+    height: auto;
+  }
+};

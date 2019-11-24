@@ -13,7 +13,7 @@
 
 @include mq(xsmall) {
     @for $i from 1 through 12 {
-        $width: percentage(1 / $i);
+    $width: percentage($i / 12);
         .col-xs-#{$i} {
             width: $width;
         }
@@ -22,8 +22,8 @@
 
 @include mq(small) {
     @for $i from 1 through 12 {
-        $width: percentage(1 / $i);
-        .col-s-#{13 - $i} {
+        $width: percentage($i / 12);
+        .col-s-#{$i} {
             width: $width;
         }
     };
@@ -31,8 +31,8 @@
 
 @include mq(medium) {
     @for $i from 1 through 12 {
-        $width: percentage(1 / $i);
-        .col-m-#{13 - $i} {
+        $width: percentage($i / 12);
+        .col-m-#{$i} {
             width: $width;
         }
     };
@@ -40,8 +40,8 @@
 
 @include mq(large) {
     @for $i from 1 through 12 {
-        $width: percentage(1 / $i);
-        .col-l-#{13 - $i} {
+        $width: percentage($i / 12);
+        .col-l-#{$i} {
             width: $width;
         }
     };
@@ -49,8 +49,8 @@
 
 @include mq(xlarge) {
     @for $i from 1 through 12 {
-        $width: percentage(1 / $i);
-        .col-xl-#{13 - $i} {
+        $width: percentage($i / 12);
+        .col-xl-#{$i} {
             width: $width;
         }
     };

@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: $text-color;
+  padding: $main-spacing;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #ccc;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  min-height: 710px;
+
+  &__icon {
+    font-size: 3rem;
+    color: $bgc-light;
+    margin: 30px 0;
+  };
+
+  &__title {
+    color: $text-color-dark;
+    margin-bottom: 10px;
+  } 
+
+  &__desc {
+    color: text-color;
+  }
+
+  &__item {
+    color: $bgc-light;
+    margin: 30px 0 10px;
+  }
+
+  &__tools-item {
+    margin-bottom: 15px;
+  }
+  
+  .text-light {
+    color: $text-color-light;
+    margin-top: 10px;
+  }
+  .text-italic {
+    font-style: italic;
+  }
+}

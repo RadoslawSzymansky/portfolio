@@ -1,0 +1,14 @@
+.about {
+  padding: 120px 0;
+  background: linear-gradient( $bgc-light, $bgc-dark);  color: #fff;
+  position: relative;
+  top: -3px;
+  letter-spacing: 1.5px;
+  text-align: center;
+
+  &__desc {
+    letter-spacing: 1.5px;
+    line-height: 145%;
+    padding: $main-spacing;
+  }
+}

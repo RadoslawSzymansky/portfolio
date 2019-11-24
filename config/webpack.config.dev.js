@@ -1,6 +1,7 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin= require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -49,6 +50,14 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
-    })
+    }),
+    new CopyPlugin(
+      [
+        {
+          from: 'src/assets',
+          to: 'assets'
+        }
+      ]
+    )
   ]
 }
